@@ -1,4 +1,11 @@
 package com.example.passwordmanager.presentation.home
 
-class HomeStates {
-}
+import com.example.passwordmanager.data.model.CredentialVault
+
+data class HomeStates(
+    val isLoading:Boolean = false,
+    val passwordList:List<CredentialVault> = emptyList(),
+    val passwordCardClicked:Boolean = false,
+    val onClickAddNewPassword:Boolean = false,
+    val errorMessage:String = ""
+)

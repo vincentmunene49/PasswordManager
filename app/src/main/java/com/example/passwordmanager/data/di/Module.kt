@@ -26,11 +26,6 @@ class Module {
     @Singleton
     fun provideDao(database: PasswordDatabase) = database.getDao()
 
-    @Provides
-    @Singleton
-    fun provideRepository(credentialDao: CredentialDao):Repository{
-        return DefaultRepositoryImplementation(credentialDao)
-    }
 
 
 }

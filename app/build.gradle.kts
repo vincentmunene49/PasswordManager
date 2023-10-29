@@ -4,7 +4,6 @@ plugins {
     alias(libs.plugins.org.jetbrains.kotlin.android)
     alias(libs.plugins.kotlin.ksp)
     alias(libs.plugins.dagger.hilt)
-//    alias (libs.plugins.kotlin.kapt)
 
 }
 
@@ -70,7 +69,8 @@ dependencies {
     //dagger
     implementation(libs.dagger.runtime)
     ksp(libs.dagger.compiler)
-//    kapt(libs.dagger.compiler)
+    //hilt navigation
+    implementation(libs.hilt.navigation)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)

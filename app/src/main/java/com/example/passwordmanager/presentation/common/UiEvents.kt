@@ -1,4 +1,5 @@
 package com.example.passwordmanager.presentation.common
 
-class uiEvents {
+sealed class UiEvents {
+    data class OneTimeEvent(val snackBarMessage:String):UiEvents()
 }
