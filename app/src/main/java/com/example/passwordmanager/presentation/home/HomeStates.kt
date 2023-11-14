@@ -1,6 +1,6 @@
 package com.example.passwordmanager.presentation.home
 
-import com.example.passwordmanager.data.model.CredentialVault
+import com.example.passwordmanager.domain.model.CredentialVault
 
 data class HomeStates(
     val isLoading:Boolean = false,
