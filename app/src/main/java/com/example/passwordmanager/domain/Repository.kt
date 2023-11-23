@@ -5,7 +5,7 @@ import kotlinx.coroutines.flow.Flow
 
 interface Repository {
 
-    fun getCredentials(): List<CredentialVault>
+    fun getCredentials(): Flow<List<CredentialVault>>
     suspend fun saveCredentials(credentialVault: CredentialVault)
     suspend fun deleteCredential(credentialVault: CredentialVault)
 }

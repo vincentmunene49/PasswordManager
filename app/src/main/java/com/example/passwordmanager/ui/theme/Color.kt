@@ -2,10 +2,20 @@ package com.example.passwordmanager.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-val Purple80 = Color(0xFFD0BCFF)
-val PurpleGrey80 = Color(0xFFCCC2DC)
-val Pink80 = Color(0xFFEFB8C8)
+//LIGHT THEME COLORS
+val light_background = Color(0xFFF2EFED)
+val light_primary = Color(0xFFFFFFFF)
+val light_onPrimary = Color(0xFF000000)
+val light_secondary = Color(0xFF4cc27e)
+val light_onSecondary = Color(0xFFFFFFFF)
+val light_tertiary = Color(0xFFF6F4F3)//bottom nav selected icon background
+val light_lightGrey = Color(0xFFF9F7F6)//details card color
+val descriptionTextColor = Color(0xFF8D908F)
 
-val Purple40 = Color(0xFF6650a4)
-val PurpleGrey40 = Color(0xFF625b71)
-val Pink40 = Color(0xFF7D5260)
+
+//DARK THEME COLORS
+val dark_background = Color(0xFF2a2a2a)
+
+//others
+
+

@@ -4,10 +4,13 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.example.passwordmanager.domain.model.CredentialVault
 import com.example.passwordmanager.domain.use_cases.PasswordManagerUseCases
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import javax.inject.Inject
 
@@ -41,8 +44,12 @@ class HomeViewModel @Inject constructor(
         }
     }
 
-    private fun getPasswords(): List<CredentialVault> {
-        return useCases.getCredentials()
+    private fun getPasswords() {
+        useCases.getCredentials().onEach { credentials ->
+            state = state.copy(
+                passwordList = credentials
+            )
+        }.launchIn(viewModelScope)
     }
 
 }
